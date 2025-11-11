@@ -4,11 +4,9 @@ import static com.codeborne.selenide.Selenide.open;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 
-import static org.openqa.selenium.bidi.script.LocalValue.setValue;
-
 public class LocatorsTests {
     @Test
-    void testByIdExamTikets() {
+    void testByIdExamTickets() {
         open("http://92.51.36.108:7777/sl.qa/exam_tickets/");
         //Поиск CSS-селектор
         $("#quantity_of_tickets").clear();
