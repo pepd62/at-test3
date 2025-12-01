@@ -69,9 +69,9 @@ public class CommissionTests {
         $(By.name("com")).shouldHave(text("20"));
         $(By.name("total")).shouldHave(text("2020"));
 
-        $x("//value[.='2000']").doubleClick();
+        $("input[name=sum]").clear();
+        $("input[name=sum]").setValue("500");
 
-        $(By.name("sum")).setValue("500");
         $(By.name("submit")).click();
         $(By.name("com")).shouldHave(text("10"));
         $(By.name("total")).shouldHave(text("510"));
