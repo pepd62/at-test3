@@ -25,10 +25,28 @@ public class LocatorsTests {
     }
 
     @Test
-    void test01_success() {
+    void test01success() {
         open("https://ru.wikipedia.org/wiki/Selenium");
         $(By.className("mw-page-title-main")).shouldHave(text("Selenium"));
-
-
+    }
+    @Test
+    void test02SetId() {
+        open("https://slqa.ru/cases/SimpleForm/");
+        $(By.id("unique_id")).setValue("Найдено по id");
+    }
+    @Test
+    void test03SetName() {
+        open("https://slqa.ru/cases/SimpleForm/");
+        $(By.name("unique_name")).setValue("Найдено по имени");
+    }
+    @Test
+    void test04SetQuote() {
+        open("https://slqa.ru/cases/SimpleForm/");
+        $(By.tagName("cite")).shouldHave(text("Томас Фуллер"));
+    }
+    @Test
+    void test05CheckText() {
+        open("https://slqa.ru/cases/SimpleForm/");
+        $(By.className("unique_class")).shouldHave(text("При входе в систему возникла ошибка"));
     }
 }
