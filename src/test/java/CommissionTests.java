@@ -75,7 +75,5 @@ public class CommissionTests {
         $(By.name("submit")).click();
         $(By.name("com")).shouldHave(text("10"));
         $(By.name("total")).shouldHave(text("510"));
-
-        sleep(5_000);
     }
 }
