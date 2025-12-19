@@ -6,7 +6,6 @@ import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.Test;
 
 public class CalculatorTests {
-
     // Название: Расчёт ежемесячного платежа по ипотеке при стандартных условиях
     @Test
     void test01Standard() {
